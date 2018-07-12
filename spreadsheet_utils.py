@@ -13,7 +13,7 @@ def write_fox_shows(shows, file='show_dupes.xlsx'):
     wb.save(file)
 
 
-def write_if_dupe_collection(fox_last_four_shows, collection_shows, collection, file='show_dupes.xlsx'):
+def write_collection_if_dupe(fox_last_four_shows, collection_shows, collection, file='show_dupes.xlsx'):
     dupes = list(set(fox_last_four_shows).intersection(collection_shows))
     if dupes:
         for fox_show in fox_last_four_shows:

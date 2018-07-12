@@ -28,7 +28,7 @@ def test_shows_for_dupes_with_existing_account(selenium, base_url):
     for collection in OTHER_COLLECTIONS:
         shows.go_to_shows_collection(selenium, collection=collection)
         other_shows = shows.get_show_names(selenium)
-        spreadsheet_utils.write_if_dupe_collection(fox_last_four_shows, collection_shows=other_shows, collection=collection, file=show_dupes_file)
+        spreadsheet_utils.write_collection_if_dupe(fox_last_four_shows, collection_shows=other_shows, collection=collection, file=show_dupes_file)
 
 
 def test_shows_for_dupes_with_new_account(selenium, base_url):
@@ -51,4 +51,4 @@ def test_shows_for_dupes_with_new_account(selenium, base_url):
     for collection in OTHER_COLLECTIONS:
         shows.go_to_shows_collection(selenium, collection=collection)
         other_shows = shows.get_show_names(selenium)
-        spreadsheet_utils.write_if_dupe_collection(fox_last_four_shows, collection_shows=other_shows, collection=collection, file=show_dupes_file)
+        spreadsheet_utils.write_collection_if_dupe(fox_last_four_shows, collection_shows=other_shows, collection=collection, file=show_dupes_file)
