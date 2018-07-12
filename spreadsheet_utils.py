@@ -7,7 +7,7 @@ columns = ["Show", "Duplicate Record"]
 ws.append(columns)
 
 
-def write_fox_show(shows, file='show_dupes.xlsx'):
+def write_fox_shows(shows, file='show_dupes.xlsx'):
     for row in zip(shows):
         ws.append(row)
     wb.save(file)

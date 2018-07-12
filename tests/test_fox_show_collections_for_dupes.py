@@ -23,7 +23,7 @@ def test_shows_for_dupes_with_existing_account(selenium, base_url):
     shows.go_to_shows_collection(selenium, collection='FOX')
     fox_last_four_shows = shows.get_show_names(selenium)[-4:]
     fox_last_four_shows.sort()
-    spreadsheet_utils.write_fox_show(fox_last_four_shows, file=show_dupes_file)
+    spreadsheet_utils.write_fox_shows(fox_last_four_shows, file=show_dupes_file)
 
     for collection in OTHER_COLLECTIONS:
         shows.go_to_shows_collection(selenium, collection=collection)
@@ -46,7 +46,7 @@ def test_shows_for_dupes_with_new_account(selenium, base_url):
     shows.go_to_shows_collection(selenium, collection='FOX')
     fox_last_four_shows = shows.get_show_names(selenium)[-4:]
     fox_last_four_shows.sort()
-    spreadsheet_utils.write_fox_show(fox_last_four_shows, file=show_dupes_file)
+    spreadsheet_utils.write_fox_shows(fox_last_four_shows, file=show_dupes_file)
 
     for collection in OTHER_COLLECTIONS:
         shows.go_to_shows_collection(selenium, collection=collection)
